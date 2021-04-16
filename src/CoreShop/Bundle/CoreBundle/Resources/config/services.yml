@@ -40,6 +40,10 @@ services:
     CoreShop\Component\Resource\Transformer\ItemKeyTransformerInterface: '@CoreShop\Component\Core\Pimcore\PimcoreKeyTransformer'
     CoreShop\Component\Core\Pimcore\PimcoreKeyTransformer: ~
 
+    CoreShop\Component\Core\Context\Currency\CountryAwareCurrencyContext:
+        arguments:
+            - '@coreshop.context.country'
+
     CoreShop\Bundle\CoreBundle\Security\ObjectUserProvider:
         arguments:
             - '@coreshop.repository.customer'

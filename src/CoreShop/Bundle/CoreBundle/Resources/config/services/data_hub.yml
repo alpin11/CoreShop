@@ -4,7 +4,7 @@ services:
         arguments:
             - '@Pimcore\Bundle\DataHubBundle\GraphQL\Service'
             - '@coreshop.data_hub.doctrine_provider'
-            - '%coreshop.model.product_store_price.class%'
+            - '%coreshop.model.cart_price_rule.class%'
         tags:
             - { name: pimcore.datahub.graphql.dataobjectquerytypegenerator, id: typegenerator_dataobjectquerydatatype_coreShopStorePrice }
 
